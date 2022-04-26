@@ -27,7 +27,7 @@ const Header = () => {
   Link = styled.a`
     color: ${tokens.neutral.color[4].value};
     font-weight: ${tokens.font.weight.regular.value};
-    opacity: .1;
+    opacity: .2;
     &:last-child {
       font-size: ${tokens.font.size.xxs.value};
       color: ${tokens.brand.color.primary[3].value};
