@@ -8,40 +8,34 @@ import Axios from 'axios';
 
 
 const Shape = () => {
+  const apiKey = "a686c2a504c64558a69415414ad6e6d3";
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const getArticles = async () => {
-      const res = await Axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=d4125556121144b9b0c23c699dc5fd4d");
+      // const res = await Axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
       setArticles(res.data.articles);
     };
     getArticles();
   });
 
   // styles
-  const Shape = styled.div`
+  const Shape = styled.article`
     border: ${tokens.border.size.none.value};
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    article {
-      padding: ${tokens.spacing.size.sm.value};
-      background-color: ${tokens.neutral.color[1].value};
-      width: 40%;
-      margin: ${tokens.spacing.size.sm.value} 0 0 0;
-    }
+    padding: ${tokens.spacing.size.sm.value};
+    background-color: ${tokens.neutral.color[1].value};
+    width: 26%;
+    margin: ${tokens.spacing.size.sm.value} 0 0 0;
   `;
 
   /*  */
   return (
-    <Shape>
-      {articles.map(({ title, description, url }) => (
-        <article>
-          <Heading title={title} />
-          <Paragraph description={description} />
-          <Button url={url} />
-        </article>
-      ))}
-    </Shape>
+    articles.map(({ title, description, url }) => (
+      <Shape>
+        <Heading title={title} />
+        <Paragraph description={description} />
+        <Button url={url} />
+      </Shape>
+    ))
   );
 };
 

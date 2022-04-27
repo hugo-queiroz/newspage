@@ -3,7 +3,6 @@ import tokens from "../assets/tokens/tokens.json";
 
 const Button = ({ url }) => {
   const ButtonWrapper = styled.div`
-    margin: ${tokens.spacing.size.sm.value} 0 0 0;
     display: flex;
   `,
   Button = styled.a`

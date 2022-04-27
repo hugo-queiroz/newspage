@@ -10,19 +10,11 @@ const MainContent = () => {
   Titulo = styled.h1`
     font-size: ${tokens.font.size.xxxl.value};
     color: ${tokens.neutral.color[4].value};
-  `,
-  CardsWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: ${tokens.spacing.size.xl.value} 0 0 0;
-  `
+  `;
   return (
     <MainContent>
       <Titulo>News Page.</Titulo>
-      <CardsWrapper>
-        <CardContent/>
-      </CardsWrapper>
+      <CardContent/>
     </MainContent>
   );
 };

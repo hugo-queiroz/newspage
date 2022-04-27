@@ -6,8 +6,9 @@ const Paragraph = ({ description }) => {
     font-size: ${tokens.font.size.xs.value};
     font-weight: ${tokens.font.weight.regular.value};
     line-height: ${tokens.line.height.distant.value};
-    margin: ${tokens.spacing.size.xxs.value} 0 0 0;
+    margin: 0 0 ${tokens.spacing.size.sm.value} 0;
     color: ${tokens.neutral.color[4].value};
+    word-break: break-all;
   `
   return (
     <Paragraph>{description}</Paragraph>
