@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tokens from "../assets/tokens/tokens.json";
 
-const Button = () => {
+const Button = ({ url }) => {
   const ButtonWrapper = styled.div`
     margin: ${tokens.spacing.size.sm.value} 0 0 0;
     display: flex;
@@ -17,7 +17,7 @@ const Button = () => {
   `
   return (
     <ButtonWrapper>
-      <Button>Ler Notícia</Button>
+      <Button href={url}>Ler Notícia</Button>
     </ButtonWrapper>
   );
 };

@@ -6,6 +6,7 @@ import tokens from "./assets/tokens/tokens.json";
 
 
 const App = () => {
+  // styles
   const App = styled.div`
     font-family: ${tokens.font.family.highlight.value}, sans-serif;
   `;

@@ -22,11 +22,6 @@ const MainContent = () => {
       <Titulo>News Page.</Titulo>
       <CardsWrapper>
         <CardContent/>
-        <CardContent/>
-        <CardContent/>
-        <CardContent/>
-        <CardContent/>
-        <CardContent/>
       </CardsWrapper>
     </MainContent>
   );
