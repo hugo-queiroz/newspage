@@ -29,8 +29,12 @@ const Clock = () => {
     color: ${tokens.brand.color.primary[2].value};
     font-size: ${tokens.font.size.md.value};
     font-weight: ${tokens.font.weight.regular.value};
+    position: relative;
+    right: 6vw;
     @media(max-width: 1056px) {
       margin: ${tokens.spacing.size.md.value} 0 0 ${tokens.spacing.size.xl.value};
+      position: relative;
+      left: 0;
     }
   `;
   return (
