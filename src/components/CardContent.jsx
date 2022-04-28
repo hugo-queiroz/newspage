@@ -4,12 +4,12 @@ import Shape from "../components/Shape";
 
 const CardContent = () => {
   const CardContent = styled.section`
-    width: 100%;
-    margin: ${tokens.spacing.size.xl.value} 0 0 0;
+    margin: ${tokens.spacing.size.xl.value} auto;
     display: flex;
     justify-content: start;
     gap: 0 calc(${tokens.spacing.size.xxs.value} + 5px);
     flex-wrap: wrap;
+    width: ${tokens.container.lg};
   `
   return (
     <CardContent>

@@ -4,8 +4,8 @@ import logoMeiuca from "../assets/icons/logo-meiuca.svg";
 
 const Header = () => {
   const Header = styled.header`
-    /* background: #fafafa; */
-    padding: ${tokens.spacing.size.xl.value};
+    padding: ${tokens.spacing.size.sm.value} 0;
+    background: ${tokens.brand.color.primary[3].value};
   `,
   Navbar = styled.nav`
     max-width: ${tokens.container.sm};
@@ -17,6 +17,7 @@ const Header = () => {
   Figure = styled.figure`
     img {
       width: ${tokens.spacing.size.xxl.value};
+      filter: brightness(2);
     }
   `,
   Links = styled.div`
@@ -30,10 +31,10 @@ const Header = () => {
     opacity: .2;
     &:last-child {
       font-size: ${tokens.font.size.xxs.value};
-      color: ${tokens.brand.color.primary[3].value};
+      color: ${tokens.brand.color.primary[1].value};
       border-bottom: ${tokens.border.size.thin.value} solid;
       opacity: 1;
-      font-weight: ${tokens.font.weight.medium.value};
+      font-weight: ${tokens.font.weight.regular.value};
       word-spacing: ${tokens.spacing.size.quarck.value};
     }
   `;
@@ -46,10 +47,6 @@ const Header = () => {
           </a>
         </Figure>
         <Links>
-          <Link aria-disabled>Trajetória</Link>
-          <Link aria-disabled>Projetos</Link>
-          <Link aria-disabled>Contato</Link>
-          <Link aria-disabled>Vagas</Link>
           <Link href="/">News</Link>
         </Links>
       </Navbar>

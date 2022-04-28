@@ -16,7 +16,7 @@ const Button = ({ url }) => {
   `
   return (
     <ButtonWrapper>
-      <Button href={url}>Ler Notícia</Button>
+      <Button href={url} target="_blank">Ler Notícia</Button>
     </ButtonWrapper>
   );
 };

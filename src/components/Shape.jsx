@@ -8,11 +8,11 @@ import Axios from 'axios';
 
 
 const Shape = () => {
-  const apiKey = "a686c2a504c64558a69415414ad6e6d3";
+  const apiKey = "d4125556121144b9b0c23c699dc5fd4d";
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const getArticles = async () => {
-      // const res = await Axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
+      const res = await Axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
       setArticles(res.data.articles);
     };
     getArticles();
@@ -23,8 +23,17 @@ const Shape = () => {
     border: ${tokens.border.size.none.value};
     padding: ${tokens.spacing.size.sm.value};
     background-color: ${tokens.neutral.color[1].value};
-    width: 26%;
+    width: 25%;
     margin: ${tokens.spacing.size.sm.value} 0 0 0;
+    @media(max-width: 1312px) {
+      width: 40%;
+    }
+    @media(max-width: 1193px) {
+      width: 38%;
+    }
+    @media(max-width: 1192px) {
+      width: 100%;
+    }
   `;
 
   /*  */
